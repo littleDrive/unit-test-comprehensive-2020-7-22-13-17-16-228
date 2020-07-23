@@ -15,7 +15,7 @@ public class VerifyInputNumberTest {
         VerifyInputNumber verifyInputNumber = new VerifyInputNumber();
 
         //when
-        boolean isVarify = verifyInputNumber.varify();
+        boolean isVarify = verifyInputNumber.varify(inputNumber);
 
         //then
         Assertions.assertTrue(isVarify);
