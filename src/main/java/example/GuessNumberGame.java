@@ -6,8 +6,10 @@ package example;
  */
 public class GuessNumberGame {
 
-    public GuessNumberGame(String s) {
+    String answer;
 
+    public GuessNumberGame(String answer) {
+        this.answer = answer;
     }
 
     public String guess(String guessNumber) {
