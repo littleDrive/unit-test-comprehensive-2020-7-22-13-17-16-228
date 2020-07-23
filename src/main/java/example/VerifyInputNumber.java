@@ -6,6 +6,6 @@ package example;
  */
 public class VerifyInputNumber {
     public boolean varify() {
-        return false;
+        return true;
     }
 }
