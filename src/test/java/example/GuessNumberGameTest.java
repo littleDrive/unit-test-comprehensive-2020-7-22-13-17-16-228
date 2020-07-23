@@ -50,5 +50,19 @@ public class GuessNumberGameTest {
 
     }
 
+    @Test
+    void should_return_0A4B_when_guess_is_4321_given_answer_is_1234() {
+        //given
+        GuessNumberGame gussNumberGame = new GuessNumberGame("1234");
+        String guessNumber = "4321";
+
+        //when
+        String guessResult = gussNumberGame.guess(guessNumber);
+
+        //then
+        Assertions.assertEquals("0A4B", guessResult);
+
+    }
+
 
 }
