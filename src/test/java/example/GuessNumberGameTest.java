@@ -36,5 +36,19 @@ public class GuessNumberGameTest {
 
     }
 
+    @Test
+    void should_return_1A1B_when_guess_is_1025_given_answer_is_1234() {
+        //given
+        GuessNumberGame gussNumberGame = new GuessNumberGame("1234");
+        String guessNumber = "1025";
+
+        //when
+        String guessResult = gussNumberGame.guess(guessNumber);
+
+        //then
+        Assertions.assertEquals("1A1B", guessResult);
+
+    }
+
 
 }
