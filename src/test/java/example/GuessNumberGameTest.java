@@ -96,13 +96,13 @@ public class GuessNumberGameTest {
     }
 
     @Test
-    void should_return_0A0B_when_guess_is_3678_given_answer_is_1234() {
+    void should_return_0A0B_when_guess_is_5678_given_answer_is_1234() {
         //given
         AnswerGenerator answerGenerator = Mockito.mock(AnswerGenerator.class);
         Mockito.when(answerGenerator.generator()).thenReturn("1234");
         GuessNumberGame gussNumberGame = new GuessNumberGame(answerGenerator.generator());
 
-        String guessNumber = "3678";
+        String guessNumber = "5678";
 
         //when
         String guessResult = gussNumberGame.guess(guessNumber);
@@ -111,5 +111,6 @@ public class GuessNumberGameTest {
         Assertions.assertEquals("0A0B", guessResult);
 
     }
+
 
 }

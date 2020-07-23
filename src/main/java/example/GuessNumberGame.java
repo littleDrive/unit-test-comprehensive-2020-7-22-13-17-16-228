@@ -13,24 +13,32 @@ public class GuessNumberGame {
     }
 
     public String guess(String guessNumber) {
-        String result = "4A0B";
-        if (guessNumber.equals("1243")) {
-            result =  "2A2B";
-        }
-        if (guessNumber.equals("1025")) {
-            result = "1A1B";
-        }
-        if (guessNumber.equals("4321")) {
-            result = "0A4B";
-        }
-        if (guessNumber.equals("2107")) {
-            result = "0A2B";
-        }
-        if (guessNumber.equals("3678")) {
-            result = "0A0B";
-        }
-        return result;
+
+        int numberOfA = getNumberOfA(guessNumber);
+        int numberOfB = getNumberOfB(guessNumber,numberOfA);
+        return String.format("%dA%dB", numberOfA,numberOfB);
     }
+
+
+    public int getNumberOfA(String guessNumber) {
+        int countA = 0;
+        for (int i = 0; i < answer.length(); i++) {
+            if (guessNumber.charAt(i) == answer.charAt(i)) {
+                countA++;
+            }
+        }
+        return countA;
+    }
+    public int getNumberOfB(String guessNumber, int countA) {
+        int countB = 0;
+        for (int i = 0; i < guessNumber.length(); i++) {
+            if (answer.contains(String.valueOf(guessNumber.charAt(i)))) {
+                countB++;
+            }
+        }
+        return countB - countA;
+    }
+
 
 
 }
