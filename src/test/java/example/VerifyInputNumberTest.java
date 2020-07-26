@@ -32,4 +32,5 @@ public class VerifyInputNumberTest {
         //then
         Assertions.assertFalse(isVarify);
     }
+
 }
