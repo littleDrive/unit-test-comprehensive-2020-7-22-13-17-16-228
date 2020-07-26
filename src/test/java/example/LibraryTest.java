@@ -86,4 +86,10 @@ class LibraryTest {
             Thread.sleep(100);
         });
     }
+
+    @Test
+    void test() {
+        GuessNumberGameProcess guessNumberGameProcess = new GuessNumberGameProcess();
+        guessNumberGameProcess.begin();
+    }
 }
