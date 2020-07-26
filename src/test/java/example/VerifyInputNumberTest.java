@@ -20,4 +20,16 @@ public class VerifyInputNumberTest {
         //then
         Assertions.assertTrue(isVarify);
     }
+    @Test
+    void should_return_false_when_varify_given_input_1223() {
+        //given
+        String inputNumber = "1223";
+        VerifyInputNumber verifyInputNumber = new VerifyInputNumber();
+
+        //when
+        boolean isVarify = verifyInputNumber.varify(inputNumber);
+
+        //then
+        Assertions.assertFalse(isVarify);
+    }
 }

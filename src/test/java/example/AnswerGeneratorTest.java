@@ -20,9 +20,6 @@ public class AnswerGeneratorTest {
         //then
         Assertions.assertTrue( answer != null);
         Assertions.assertEquals(4, answer.length());
-//        Assertions.assertTrue(Integer.valueOf(answer.charAt(0))<=9 && Integer.valueOf(answer.charAt(0))>=0);
-//        Assertions.assertTrue(Integer.valueOf(answer.charAt(1))<=9 && Integer.valueOf(answer.charAt(1))>=0);
-//        Assertions.assertTrue(Integer.valueOf(answer.charAt(2))<=9 && Integer.valueOf(answer.charAt(2))>=0);
-//        Assertions.assertTrue(Integer.valueOf(answer.charAt(3))<=9 && Integer.valueOf(answer.charAt(3))>=0);
+
     }
 }
