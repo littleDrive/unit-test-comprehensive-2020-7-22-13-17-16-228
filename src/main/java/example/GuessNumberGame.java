@@ -14,29 +14,29 @@ public class GuessNumberGame {
 
     public String guess(String guessNumber) {
 
-        int numberOfA = getNumberOfA(guessNumber);
-        int numberOfB = getNumberOfB(guessNumber,numberOfA);
-        return String.format("%dA%dB", numberOfA,numberOfB);
+        int rightPosition = getRightPosition(guessNumber);
+        int rightNuberButPosition = getRightNuberButPosition(guessNumber,rightPosition);
+        return String.format("%dA%dB", rightPosition,rightNuberButPosition);
     }
 
 
-    public int getNumberOfA(String guessNumber) {
-        int countA = 0;
+    public int getRightPosition(String guessNumber) {
+        int rightPosition = 0;
         for (int i = 0; i < answer.length(); i++) {
             if (guessNumber.charAt(i) == answer.charAt(i)) {
-                countA++;
+                rightPosition++;
             }
         }
-        return countA;
+        return rightPosition;
     }
-    public int getNumberOfB(String guessNumber, int countA) {
-        int countB = 0;
+    public int getRightNuberButPosition(String guessNumber, int countA) {
+        int rightNuberButPosition = 0;
         for (int i = 0; i < guessNumber.length(); i++) {
             if (answer.contains(String.valueOf(guessNumber.charAt(i)))) {
-                countB++;
+                rightNuberButPosition++;
             }
         }
-        return countB - countA;
+        return rightNuberButPosition - countA;
     }
 
 

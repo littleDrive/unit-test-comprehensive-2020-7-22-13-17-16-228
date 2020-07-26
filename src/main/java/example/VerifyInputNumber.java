@@ -16,15 +16,12 @@ public class VerifyInputNumber {
 
     public boolean varify(String inputNumber) {
 
-        if (inputNumber.length() != 4) {
-           return false;
-        }
         int i = 0;
         while (i < 4) {
             hashSet.add(String.valueOf(inputNumber.charAt(i)));
             i++;
         }
-        if (hashSet.size() != 4) {
+        if (inputNumber.length() != 4 || hashSet.size() != 4) {
             return false;
         }
         return true;
